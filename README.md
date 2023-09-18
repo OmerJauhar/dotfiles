@@ -7,7 +7,6 @@ Alacritty
 picom    
 i3-standard bar   
 nnn     
-htop    
-spacecraft.rs    
+htop        
 Starship   
 vs dark high constrast theme    
