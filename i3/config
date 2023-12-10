@@ -183,6 +183,7 @@ bindsym $mod+r mode "resize"
 # finds out, if available)
 bar {
 
+
    status_command i3status
 }
 exec_always xrandr --output eDP --mode 1920x1080 --pos 3120x0 --rotate normal --output HDMI-A-0 --mode 1600x1200 --pos 0x0 --rotate left --output DisplayPort-0 --primary --mode 1920x1080 --pos 1200x0 --rotate normal
@@ -190,9 +191,14 @@ exec_always xrandr --output eDP --mode 1920x1080 --pos 3120x0 --rotate normal --
 bindsym Control+Mod1+l exec "i3lock -c 000000"
 # auto lock the screen
 exec "xautolock -detectsleep -time 3 -locker \"i3lock -c 000000\""
-#brightness keys bindings 
-bindsym XF86MonBrightnessDown exec brightnessctl set 10%-
-bindsym XF86MonBrightnessUp   exec brightnessctl set 10%+
+#brightness keys bindings
+bindsym $mod+Shift+x exec brightnessctl set 10%-
+bindsym $mod+Shift+z exec brightnessctl set 10%+
+bindsym $mod+Shift+a exec /home/oj/scripts/tableL.sh
+bindsym $mod+Shift+s exec /home/oj/scripts/table.sh
+bindsym $mod+Shift+d exec /home/oj/scripts/tableR.sh
+bindsym $mod+Shift+i exec /home/oj/Downloads/ideaIU-2023.3/idea-IU-233.11799.241/bin/idea.sh
+
 
 exec_always  feh --bg-scale   ~/Desktop/dw.jpg
 
